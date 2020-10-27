@@ -5,7 +5,7 @@ import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 
 export default function TabOneScreen() {
-  if(Platform.OS == "ios"){
+  if(Platform.OS == "web"){
     return (
       <View style={styles.container}>
         <Text style={styles.title}>IOS</Text>
