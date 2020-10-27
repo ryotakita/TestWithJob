@@ -1,17 +1,24 @@
 import * as React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Platform, Button } from 'react-native';
 
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 
 export default function TabOneScreen() {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/TabOneScreen.js" />
-    </View>
-  );
+  if(Platform.OS == "ios"){
+    return (
+      <View style={styles.container}>
+        <Text style={styles.title}>IOS</Text>
+      </View>
+    )
+  }
+  else{
+    return (
+      <View style={styles.container}>
+        <Text style={styles.title}>IOSじゃない</Text>
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
@@ -21,12 +28,17 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   title: {
-    fontSize: 20,
+    fontSize: 30,
     fontWeight: 'bold',
+  },
+  body: {
+    fontSize: 10,
+    fontWeight: "normal",
+    color: "#f0f"
   },
   separator: {
     marginVertical: 30,
-    height: 1,
+    height: 3,
     width: '80%',
   },
 });
