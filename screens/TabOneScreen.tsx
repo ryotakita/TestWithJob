@@ -15,7 +15,7 @@ export default function TabOneScreen() {
   else{
     return (
       <View style={styles.container}>
-        <Text style={styles.title}>IOSじゃない</Text>
+        <Text style={styles.title}>oTIMPOOOOOOO</Text>
       </View>
     );
   }
